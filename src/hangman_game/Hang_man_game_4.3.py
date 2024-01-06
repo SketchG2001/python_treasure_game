@@ -1,3 +1,5 @@
+import os
+
 from hangman_words import word_list
 import random
 chosen_word = random.choice(word_list)
@@ -15,6 +17,7 @@ for _ in range(word_length):
 end_of_game = False
 while not end_of_game:
     guess = input("Guess a letter: \n").lower()
+    os.system('cls' if os.name == 'nt' else 'clear')
     if guess in display:
         print(f"You've already guessed{guess}")
     for position in range(word_length):
