@@ -9,7 +9,7 @@ if weekday == 3:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)
         my_email = "testingsketch@gmail.com"
-        password = "eqhp ioap ivud rrpb"
+        password = ""
         with smtplib.SMTP('email sender SMTP.gmail.com') as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
